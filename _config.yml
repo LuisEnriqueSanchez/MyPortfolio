@@ -172,10 +172,10 @@ defaults:
       seo:
         type:          WebPage
 
-kramdown:
-  math_engine:         katex
-  math_engine_opts:    {}
-  footnote_backlink:   '&#x21a9;&#xfe0e;'
+# kramdown: #Motor matemático, para fórmulas. Lo quito todo porque no lo voy a usar
+  # math_engine:         katex #Katex no lo soporta Github, tiene que ser mathjax
+  # math_engine_opts:    {}
+  # footnote_backlink:   '&#x21a9;&#xfe0e;'
 
 
 # Hydejack Settings

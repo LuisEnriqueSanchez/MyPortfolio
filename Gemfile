@@ -30,10 +30,10 @@ gem "jekyll-theme-hydejack", "~> 9.1"
 #    For details, see <https://github.com/kramdown/math-katex#documentation>
 #
 # If you're using the MathJax math engine instead, free to remove the line below:
-gem "kramdown-math-katex"
+#gem "kramdown-math-katex" # Quitado por usar MathJax y Katex no es compatible con github
 
 # A JavaScript runtime for Ruby that helps with running the katex gem above.
-gem "duktape"
+#gem "duktape" # Quitado por usar Ruby y duktape no es compatible con github
 
 # Required for `jekyll serve` in Ruby 3
 gem "webrick"
