@@ -1,1 +1,1 @@
-Sitemap: /sitemap.xml
+Sitemap: https://luisenriquesanchez.github.io/MyPortfolio/sitemap.xml
