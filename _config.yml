@@ -1,10 +1,11 @@
 # site settings
-title: Forty
+title: Luis Enrique's Porfolio
 subtitle: by HTML5 UP
 email: youremailaddress@gmail.com
-description: A responsive site template designed by HTML5 Up<br /> and released under the Creative Commons.
-baseurl: "/forty-jekyll-theme" # the subpath of your site, e.g. /blog
-url: # the base hostname & protocol for your site
+description: My personal portfolio as an Aerospace Engineer.
+#A responsive site template designed by HTML5 Up<br /> and released under the Creative Commons.
+baseurl: "/MyPortfolio" # the subpath of your site, e.g. /blog. Se pone el nombre exacto del portfolio.
+url: https://github.com/LuisEnriqueSanchez/MyPortfolio # the base hostname & protocol for your site
 author:
 street_address: 1234 Somewhere Road
 city: Nashville
