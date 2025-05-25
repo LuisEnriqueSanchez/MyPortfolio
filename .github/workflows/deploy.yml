@@ -1,0 +1,30 @@
+name: Build and Deploy Jekyll Site
+
+on:
+  push:
+    branches:
+      - master # Esto significa que la acción se activa cuando hay un push a la rama 'master'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest # El tipo de máquina virtual que usará GitHub para construir
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4 # Paso para descargar tu código del repositorio
+
+    - name: Setup Ruby
+      uses: ruby/setup-ruby@v1 # Acción para configurar Ruby
+      with:
+        ruby-version: '3.x' # Versión de Ruby a usar (puedes especificar '3.2' o '3.3' si quieres)
+        bundler-cache: true # Esto instalará automáticamente las gemas listadas en tu Gemfile
+
+    - name: Build with Jekyll
+      run: bundle exec jekyll build # Comando para construir tu sitio Jekyll
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v4 # Acción para desplegar el sitio a GitHub Pages
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }} # Token de autenticación proporcionado por GitHub
+        publish_dir: ./_site # La carpeta que Jekyll genera con los archivos HTML/CSS/JS estáticos
+        publish_branch: gh-pages # La RAMA a la que se subirá el sitio construido (¡ESTO ES CLAVE!)
